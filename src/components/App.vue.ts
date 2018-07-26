@@ -1,15 +1,15 @@
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import Vue from "vue";
+import Component from "vue-class-component";
 
 @Component({
-    template: `
+	template: `
         <div @click='onClick'>{{ test }}</div>
     `
 })
 export default class App extends Vue {
-    test: string = 'Hey =)';
+	public test: string = "Hey =)";
 
-    onClick(): void {
-        window.alert(this.test);
-    }
+	public onClick(): void {
+		window.alert(this.test);
+	}
 }

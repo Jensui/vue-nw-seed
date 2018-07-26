@@ -1,15 +1,15 @@
-import Vue from 'vue';
+import Vue from "vue";
 
-import App from './components/App.vue';
+import App from "./components/App.vue";
 
 // Hot reloading
-import * as hot from './dev/hot';
-console.log(process.env.NODE_ENV);
-if(process.env.NODE_ENV !== 'production')
-    hot.reload();
+import * as hot from "./dev/hot";
+if (process.env.NODE_ENV !== "production") {
+	hot.reload();
+}
 
-new Vue({
-    el: '#app',
-    template: '<App/>',
-    components: { App }
+const vue = new Vue({
+	el: "#app",
+	template: "<App/>",
+	components: { App }
 });
